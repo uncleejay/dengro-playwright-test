@@ -26,6 +26,27 @@ export class HomePage {
     }
 
     async verifyHeaderNavIsVisible() {
-        await expect(this.featuresBenefits).toBeVisible();
+        await expect(this.heading).toBeVisible();
+    }
+
+    async clickJoinForFreeBtn() {
+        await this.joinForFree.click();
+
+        // assert sign up text is visibile when the join free button is clicked
+        await expect(this.signUpText).toBeVisible();
+    }
+
+    async verifyLinkFunctionality() {
+        await this.pricingLink.click()
+
+        // Assert the URL is correct (using relative path)
+        await expect(this.page).toHaveURL('/pricing/');
+
+        // assert currency text is displayed when pricing link is clicked
+        await expect(this.currency).toBeVisible();
+    }
+
+    async captureScreenshot() {
+        await this.page.screenshot({path: 'screenshot.png'});
     }
 }
