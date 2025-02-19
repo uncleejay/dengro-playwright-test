@@ -18,6 +18,8 @@ export class PricingPage {
     }
 
     async changeCurrency() {
+
+        
         // click the currency dropdown
         await this.currencyDropdown.click();
 
