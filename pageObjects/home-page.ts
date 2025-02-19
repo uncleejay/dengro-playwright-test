@@ -47,6 +47,7 @@ export class HomePage {
     }
 
     async captureScreenshot() {
-        await this.page.screenshot({path: 'screenshot.png'});
-    }
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');  // timestamp
+        await this.page.screenshot({ path: `screenshot-${timestamp}.png` });
+    }    
 }
