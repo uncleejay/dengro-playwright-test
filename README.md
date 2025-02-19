@@ -23,7 +23,7 @@ Follow these steps to set up and run the project:
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-repository-url.git
+git clone https://github.com/uncleejay/dengro-playwright-test.git
 cd your-repository-folder
 ```
 
